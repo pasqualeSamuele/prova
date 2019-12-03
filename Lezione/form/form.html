@@ -1,0 +1,63 @@
+<html>
+
+    <head>
+
+    </head>
+
+    <body>
+        <!-- action = "nomeFile.php 
+            method = "GET" scelgo il metodo con cui il form invia i dati alla pagina
+        -->
+        <form action="" method="GET">
+            <!-- type: definisco il tipo di input
+                size: definisco la lunghezza
+                maxlength: lunghezza massima della stringa
+                name: nome della variabile a cui associo il valore
+            -->
+            Cognome: <input type="text" size="12" maxlength="24" name="cognome"><br>
+            <!--&nbsp: è lo spazio per incolonnare le input text-->
+            Nome: &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<input type="text" size="12" maxlength="24" name="cognome"><br><br>
+
+            <!--tipo di input: radio... devono avere lo stesso nome, in questo modo solo uno può essere selezionato-->
+            Maschio:&nbsp <input type="radio" name="sesso"><br>
+            Femmina: <input type="radio" name="sesso"><br><br>
+
+            <!--tipo di input checkbox, il nome deve essere una stringa e uguale per tutti in modo tale che tutti i valori
+            salvati vengano spediti alla pagina-->
+            Cibo preferito: <br>
+            Carne: <input type="checkbox" name="cibi[]"><br>
+            Pesce: <input type="checkbox" name="cibi[]"><br>
+            Fagioli: <input type="checkbox" name="cibi[]"><br><br>
+
+            <!--textarea, 
+                rows e cols definiscono la dimensione
+                name definisce il nome della variabile su cui viene salvato l'input
+            -->
+            <textarea name="citazione" cols="20" rows="10">inserisci qui la tua citazione preferita!</textarea><br><br>
+
+            <!--combobox,
+            name: nome della variabile su cui viene salvato il dato selezionato,
+            size: numero di scelte che vengono visualizzate alla volta (es. 2 allora vedrò due opzioni senza aprire tutta la tendina)
+            value (in option) è il valore inviato alla pagina-->
+            Seleziona il tuo giorno preferito<br>
+            <select name="giornoPreferito" size="2">
+                <option value="lun">Lunedi</option>
+                <option value="mar">Martedi</option>
+                <option value="mer">Mercoledi</option>
+                <option value="gio">Giovedi</option>
+                <option value="ven">Venerdi</option>
+                <option value="sab">Sabato</option>
+                <option value="dom">Domenica</option>
+            </select><br><br>
+
+            <!--reset: resetta tutti i valori impostati nel form
+            value: nome sul bottone-->
+            <input type="reset" value="resetta tutto"><br><br>
+            
+            <!--button, si può usare sia button che submit,
+            submit manda direttamente alla pagina indicata nell'action del form passando i parametri inseriti dall'utente
+            value: nome dell'etichetta del pulsate-->
+            <input type="submit" value="ok"><br><br>
+        </form>    
+    </body>
+</html>
